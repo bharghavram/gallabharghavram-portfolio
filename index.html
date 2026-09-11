@@ -169,6 +169,7 @@
     .projects-banner span { color: var(--accent-2); }
     .skills-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
     @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .skills-grid { grid-template-columns: repeat(3, 1fr); } }
     .skill-block-title { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-serif); font-size: 1.375rem; font-weight: 700; color: var(--primary); margin-bottom: 1.25rem; }
     .skill-block-title i { color: var(--accent-2); }
     .skill-sub { font-weight: 600; margin-bottom: 0.5rem; color: var(--fg); font-size: 0.9375rem; }
@@ -277,94 +278,13 @@
       <span class="exp-sub-title">Project Experience</span>
       <div class="exp-sub-line"></div>
     </div>
-    <div class="exp-list">
-      <div class="card card-accent-green fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div><div class="card-title">Software Development Intern</div><div class="card-desc">KVK Technoid</div></div>
-            <span class="badge badge-green">Jun 2026 – Present</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <ul class="exp-bullets">
-            <li class="exp-bullet">Contributing to full-stack and AI-driven feature development using Python and modern web frameworks.</li>
-            <li class="exp-bullet">Collaborating with the engineering team on building and testing backend services and APIs.</li>
-            <li class="exp-bullet">Assisting with debugging, code reviews, and deployment support for ongoing projects.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card card-accent-green fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div><div class="card-title">Freelance Python &amp; AI Developer</div><div class="card-desc">Self-Employed | Remote</div></div>
-            <span class="badge badge-green">Jun 2025 – Present</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <ul class="exp-bullets">
-            <li class="exp-bullet">Delivered AI-based solutions to 5+ clients, developing Machine Learning and Deep Learning models for prediction, classification, and anomaly detection using Python.</li>
-            <li class="exp-bullet">Built Generative AI applications using Large Language Models (LLMs), including document Q&amp;A systems, conversational assistants, and vector-database retrieval pipelines.</li>
-            <li class="exp-bullet">Automated a daily stock-market data segregation system for a trading client using Pandas, Streamlit, and Python, reducing manual processing and enabling structured analysis workflows.</li>
-            <li class="exp-bullet">Developed a full-stack website for a sports company using ReactJS, delivering a responsive and performant user experience.</li>
-            <li class="exp-bullet">Built a hybrid house price prediction system combining Machine Learning and Deep Learning for a Master's research project.</li>
-            <li class="exp-bullet">Implemented loan eligibility prediction using Qwen3.5 with LoRA fine-tuning for efficient, domain-specific inference.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card card-accent-green fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div><div class="card-title">Software Development Engineer (SDE) Intern</div><div class="card-desc">SHNOOR International LLC</div></div>
-            <span class="badge badge-green">Jan 2026 – Mar 2026</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <ul class="exp-bullets">
-            <li class="exp-bullet">Developed and maintained full-stack web modules using ReactJS, JavaScript, and backend APIs.</li>
-            <li class="exp-bullet">Worked on admin dashboards, authentication systems, and role-based access control features.</li>
-            <li class="exp-bullet">Integrated frontend interfaces with backend services, handling API communication and error management.</li>
-            <li class="exp-bullet">Debugged production issues, resolved application errors, and improved system stability through collaborative development.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div id="project-exp-list" class="exp-list"></div>
     <div class="exp-sub-header fade-up" style="margin-top:3rem;">
       <div class="exp-sub-icon purple"><i class="fa-solid fa-chalkboard-user"></i></div>
       <span class="exp-sub-title">Trainee Experience</span>
       <div class="exp-sub-line"></div>
     </div>
-    <div class="exp-list">
-      <div class="card card-accent-purple fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div><div class="card-title">AI Fullstack Trainer — Batch 1</div><div class="card-desc">Generative AI Training Program | In-person / Remote</div></div>
-            <span class="badge badge-purple">Completed</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <ul class="exp-bullets">
-            <li class="exp-bullet">Conducted a complete AI Fullstack course covering Python, Machine Learning, Deep Learning, and Generative AI from scratch to deployment.</li>
-            <li class="exp-bullet">Guided learners through hands-on projects, prompt engineering techniques, LLM application development, and real-world implementation scenarios.</li>
-            <li class="exp-bullet">Designed curriculum covering end-to-end AI development lifecycle including data processing, model building, and API integration.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card card-accent-purple fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div><div class="card-title">Generative AI Trainer — Batches 2 &amp; 3</div><div class="card-desc">Generative AI Training Program | In-person / Remote</div></div>
-            <span class="badge badge-purple">2 Batches Completed</span>
-          </div>
-        </div>
-        <div class="card-content">
-          <ul class="exp-bullets">
-            <li class="exp-bullet">Conducted 2 dedicated Generative AI training batches, covering LLM fundamentals, prompt engineering, RAG pipelines, and agent-based architectures.</li>
-            <li class="exp-bullet">Delivered practical sessions on integrating LLMs into real-world applications using LangChain, LangFlow, and vector databases.</li>
-            <li class="exp-bullet">Mentored learners through capstone projects, helping them build production-ready GenAI solutions.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div id="trainee-exp-list" class="exp-list"></div>
   </div>
 </section>
 <section id="projects" class="section-alt">
@@ -374,164 +294,19 @@
       <i class="fa-solid fa-trophy"></i>
       <p>Delivered <span>5+ client solutions</span> across AI, ML, full-stack development, and data automation domains.</p>
     </div>
-    <div class="projects-grid">
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-chart-line project-icon"></i><span class="badge-outline badge">Python, Pandas, Streamlit</span></div>
-          <div class="card-title">Stock Market Data Segregation</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">Automated daily stock-market data segregation system for a trading client. Eliminates manual processing overhead and enables structured analysis workflows for financial decision-making.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Automated daily data collection and segregation pipeline</li>
-            <li>Built interactive Streamlit dashboard for real-time monitoring</li>
-            <li>Eliminated manual processing, saving significant time daily</li>
-            <li>Improved data accuracy and consistency for trading decisions</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">Python</span><span class="badge badge-outline">Pandas</span><span class="badge badge-outline">Streamlit</span><span class="badge badge-outline">Automation</span></div>
-        </div>
-      </div>
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-globe project-icon"></i><span class="badge-outline badge">ReactJS, Fullstack</span></div>
-          <div class="card-title">Sports Company Website</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">Full-stack web presence for a sports company, built with ReactJS. Focused on high performance, responsive design, and engaging user experience to showcase the brand and its offerings.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Delivered complete responsive frontend using ReactJS</li>
-            <li>Implemented component-based architecture for maintainability</li>
-            <li>Integrated backend APIs for dynamic content management</li>
-            <li>Optimized performance and cross-browser compatibility</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">ReactJS</span><span class="badge badge-outline">JavaScript</span><span class="badge badge-outline">CSS</span><span class="badge badge-outline">REST APIs</span></div>
-        </div>
-      </div>
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-house project-icon"></i><span class="badge-outline badge">ML, Deep Learning</span></div>
-          <div class="card-title">Hybrid House Price Prediction</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">Research-grade hybrid house price prediction system combining classical Machine Learning and Deep Learning, developed for a Master's thesis. Achieves superior accuracy by leveraging strengths of both paradigms.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Designed hybrid architecture blending ML regression with neural networks</li>
-            <li>Performed in-depth feature engineering and EDA on real estate datasets</li>
-            <li>Achieved improved prediction accuracy over single-model baselines</li>
-            <li>Produced academic-grade documentation and model evaluation report</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">Python</span><span class="badge badge-outline">TensorFlow</span><span class="badge badge-outline">Scikit-learn</span><span class="badge badge-outline">Pandas</span></div>
-        </div>
-      </div>
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-robot project-icon"></i><span class="badge-outline badge">LLM, LoRA Fine-tuning</span></div>
-          <div class="card-title">Loan Eligibility Prediction (Qwen3.5 + LoRA)</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">Fine-tuned Qwen3.5 with LoRA (Low-Rank Adaptation) for domain-specific loan eligibility classification. Demonstrates efficient LLM adaptation for financial use-cases without full model retraining.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Applied LoRA fine-tuning on Qwen3.5 for financial classification</li>
-            <li>Achieved high accuracy with significantly reduced compute cost</li>
-            <li>Built inference pipeline for real-time loan eligibility decisions</li>
-            <li>Documented fine-tuning methodology and evaluation benchmarks</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">Qwen3.5</span><span class="badge badge-outline">LoRA</span><span class="badge badge-outline">Hugging Face</span><span class="badge badge-outline">Python</span></div>
-        </div>
-      </div>
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-brain project-icon"></i><span class="badge-outline badge">Python, LLMs, RAG</span></div>
-          <div class="card-title">AI Question Generator (SaaS)</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">SaaS platform that automatically generates exam-quality questions from uploaded study materials, saving educational institutions hours of manual preparation time.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Implemented document parsing using PyMuPDF &amp; LlamaIndex</li>
-            <li>Created RAG pipeline with ChromaDB embeddings</li>
-            <li>Supports MCQ, True/False, Fill-in-the-Blanks, Short Answer</li>
-            <li>Generates structured question papers within seconds</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">Python</span><span class="badge badge-outline">Flask</span><span class="badge badge-outline">LLMs</span><span class="badge badge-outline">ChromaDB</span><span class="badge badge-outline">React</span></div>
-        </div>
-      </div>
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top"><i class="fa-solid fa-file-invoice project-icon"></i><span class="badge-outline badge">Python, GenAI, PDF</span></div>
-          <div class="card-title">Financial Auditing Intelligence System</div>
-        </div>
-        <div class="card-content">
-          <p class="project-desc">AI-powered system that automates the entire financial auditing workflow using advanced document processing and Gemini 2.5 Flash, significantly reducing manual analysis time.</p>
-          <div class="project-achievements"><strong>Key Achievements:</strong><ul>
-            <li>Automated PDF extraction using PyPDF2 &amp; Hugging Face embeddings</li>
-            <li>Integrated Gemini 2.5 Flash for context-driven analysis</li>
-            <li>Generates comprehensive audit reports with risk assessment</li>
-            <li>Reduces manual analysis time significantly</li>
-          </ul></div>
-          <div class="badge-row"><span class="badge badge-outline">Python</span><span class="badge badge-outline">GenAI</span><span class="badge badge-outline">Gemini API</span><span class="badge badge-outline">PDF Processing</span></div>
-        </div>
-      </div>
-    </div>
+    <div id="projects-grid" class="projects-grid"></div>
   </div>
 </section>
 <section id="skills">
   <div class="container">
     <h2 class="section-title fade-up">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="fade-up">
-        <h3 class="skill-block-title"><i class="fa-solid fa-brain"></i> Machine Learning &amp; AI</h3>
-        <div class="skill-sub-group">
-          <p class="skill-sub">Deep Learning &amp; NLP</p>
-          <p style="color:rgba(230,225,245,0.75); font-size:0.9375rem;">Neural Networks, Ensemble Methods, Computer Vision, Time Series Analysis, Multimodal Language Models, NLP, Regression &amp; Classification</p>
-        </div>
-        <div class="skill-sub-group">
-          <p class="skill-sub">Libraries &amp; Frameworks</p>
-          <div class="badge-cloud">
-            <span class="badge badge-outline">TensorFlow</span><span class="badge badge-outline">PyTorch</span><span class="badge badge-outline">Keras</span><span class="badge badge-outline">Streamlit</span><span class="badge badge-outline">OpenCV</span><span class="badge badge-outline">Scikit-learn</span><span class="badge badge-outline">Pandas</span><span class="badge badge-outline">NumPy</span><span class="badge badge-outline">Seaborn</span><span class="badge badge-outline">Matplotlib</span><span class="badge badge-outline">Hugging Face</span><span class="badge badge-outline">LangChain</span><span class="badge badge-outline">LangFlow</span><span class="badge badge-outline">Multi-Agent Systems</span><span class="badge badge-outline">MCP Server</span><span class="badge badge-outline">Fine-tuning</span>
-          </div>
-        </div>
-      </div>
-      <div class="fade-up">
-        <h3 class="skill-block-title"><i class="fa-solid fa-code"></i> Fullstack Development</h3>
-        <div class="skill-sub-group">
-          <p class="skill-sub">Frontend</p>
-          <div class="badge-cloud"><span class="badge badge-outline">HTML</span><span class="badge badge-outline">CSS</span><span class="badge badge-outline">JavaScript</span><span class="badge badge-outline">React.js</span><span class="badge badge-outline">AJAX</span><span class="badge badge-outline">DOM</span><span class="badge badge-outline">Figma</span></div>
-        </div>
-        <div class="skill-sub-group">
-          <p class="skill-sub">Backend &amp; Databases</p>
-          <div class="badge-cloud"><span class="badge badge-outline">Flask</span><span class="badge badge-outline">FastAPI</span><span class="badge badge-outline">API Routing</span><span class="badge badge-outline">SQL</span><span class="badge badge-outline">MongoDB</span><span class="badge badge-outline">MySQL</span><span class="badge badge-outline">SQLite</span><span class="badge badge-outline">CRUD</span></div>
-        </div>
-        <div class="skill-sub-group">
-          <p class="skill-sub">AI Tools &amp; Platforms</p>
-          <div class="badge-cloud"><span class="badge badge-outline">Claude</span><span class="badge badge-outline">GPT</span><span class="badge badge-outline">Gemini</span><span class="badge badge-outline">BoltAI</span><span class="badge badge-outline">Lovable AI</span></div>
-        </div>
-      </div>
-      <div class="fade-up" style="grid-column: 1 / -1;">
-        <h3 class="skill-block-title">Soft Skills</h3>
-        <div class="soft-skills-grid">
-          <div class="soft-skill-pill">Team Leadership</div><div class="soft-skill-pill">Mentoring</div><div class="soft-skill-pill">Technical Documentation</div><div class="soft-skill-pill">Client Communication</div><div class="soft-skill-pill">Agile Methodologies</div><div class="soft-skill-pill">Public Speaking</div>
-        </div>
-      </div>
-    </div>
+    <div id="skills-grid" class="skills-grid"></div>
   </div>
 </section>
 <section class="section-alt">
   <div class="container">
     <h2 class="section-title fade-up">Education</h2>
-    <div class="edu-list">
-      <div class="card card-accent-left fade-up">
-        <div class="card-header"><div class="card-meta"><div><div class="card-title">B.Tech in Artificial Intelligence &amp; Machine Learning</div><div class="card-desc">Bapatla Engineering College</div></div><span class="badge">2022 – 2026</span></div></div>
-        <div class="card-content"><p style="color:rgba(230,225,245,0.75);">CGPA: 8.9</p></div>
-      </div>
-      <div class="card card-accent-left fade-up">
-        <div class="card-header"><div class="card-meta"><div><div class="card-title">Class XII</div><div class="card-desc">DKNP Junior College, Vissannapet</div></div><span class="badge">2020 – 2022</span></div></div>
-        <div class="card-content"><p style="color:rgba(230,225,245,0.75);">Percentage: 94%</p></div>
-      </div>
-      <div class="card card-accent-left fade-up">
-        <div class="card-header"><div class="card-meta"><div><div class="card-title">Class X</div><div class="card-desc">Sri Siddhartha High School, Vissannapet</div></div><span class="badge">2019 – 2020</span></div></div>
-        <div class="card-content"><p style="color:rgba(230,225,245,0.75);">Percentage: 97%</p></div>
-      </div>
-    </div>
+    <div id="edu-list" class="edu-list"></div>
   </div>
 </section>
 <section id="contact" class="section-dark" style="text-align:center;">
@@ -547,6 +322,124 @@
 </section>
 <footer><div class="container"><p>© 2026 Galla Bharghav Ram. All rights reserved.</p></div></footer>
 <canvas id="smoke-canvas"></canvas>
+<script src="data.js"></script>
+<script>
+  // ── Render: Experiences ────────────────────────────────────
+  function renderExpList(containerId, items) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = items.map(exp => `
+      <div class="card ${exp.cardClass} fade-up">
+        <div class="card-header">
+          <div class="card-meta">
+            <div>
+              <div class="card-title">${exp.title}</div>
+              <div class="card-desc">${exp.company}</div>
+            </div>
+            <span class="badge ${exp.badgeClass}">${exp.period}</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <ul class="exp-bullets">
+            ${exp.bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
+          </ul>
+        </div>
+      </div>`).join('');
+  }
+  renderExpList('project-exp-list', experiences.projectExperience);
+  renderExpList('trainee-exp-list', experiences.traineeExperience);
+
+  // ── Render: Projects ───────────────────────────────────────
+  (function renderProjects() {
+    const container = document.getElementById('projects-grid');
+    if (!container) return;
+    container.innerHTML = projects.map(p => `
+      <div class="card project-card fade-up">
+        <div class="card-header">
+          <div class="project-card-top">
+            <i class="${p.icon} project-icon"></i>
+            <span class="badge badge-outline">${p.badgeLabel}</span>
+          </div>
+          <div class="card-title">${p.url
+            ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none; border-bottom:1px solid rgba(139,92,246,0.4); transition:var(--transition);" onmouseover="this.style.borderBottomColor='var(--accent-2)'" onmouseout="this.style.borderBottomColor='rgba(139,92,246,0.4)'">${p.title} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75em; opacity:0.7;"></i></a>`
+            : p.title}</div>
+        </div>
+        <div class="card-content">
+          <p class="project-desc">${p.description}</p>
+          <div class="project-achievements">
+            <strong>Key Achievements:</strong>
+            <ul>${p.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
+          </div>
+          <div class="badge-row">
+            ${p.tags.map(t => `<span class="badge badge-outline">${t}</span>`).join('')}
+          </div>
+        </div>
+      </div>`).join('');
+  })();
+
+  // ── Render: Skills ─────────────────────────────────────────
+  (function renderSkills() {
+    const container = document.getElementById('skills-grid');
+    if (!container) return;
+    function renderGroups(groups) {
+      return groups.map(g => {
+        if (g.type === 'text') {
+          return `<div class="skill-sub-group">
+            <p class="skill-sub">${g.label}</p>
+            <p style="color:rgba(230,225,245,0.75); font-size:0.9375rem;">${g.content}</p>
+          </div>`;
+        }
+        return `<div class="skill-sub-group">
+          <p class="skill-sub">${g.label}</p>
+          <div class="badge-cloud">
+            ${g.items.map(i => `<span class="badge badge-outline">${i}</span>`).join('')}
+          </div>
+        </div>`;
+      }).join('');
+    }
+    const s = technicalSkills;
+    container.innerHTML = `
+      <div class="fade-up">
+        <h3 class="skill-block-title"><i class="${s.mlAndAI.icon}"></i> ${s.mlAndAI.title}</h3>
+        ${renderGroups(s.mlAndAI.groups)}
+      </div>
+      <div class="fade-up">
+        <h3 class="skill-block-title"><i class="${s.fullstack.icon}"></i> ${s.fullstack.title}</h3>
+        ${renderGroups(s.fullstack.groups)}
+      </div>
+      <div class="fade-up">
+        <h3 class="skill-block-title"><i class="${s.aiCreative.icon}"></i> ${s.aiCreative.title}</h3>
+        ${renderGroups(s.aiCreative.groups)}
+      </div>
+      <div class="fade-up" style="grid-column: 1 / -1;">
+        <h3 class="skill-block-title">Soft Skills</h3>
+        <div class="soft-skills-grid">
+          ${s.softSkills.map(sk => `<div class="soft-skill-pill">${sk}</div>`).join('')}
+        </div>
+      </div>`;
+  })();
+
+  // ── Render: Education ──────────────────────────────────────
+  (function renderEducation() {
+    const container = document.getElementById('edu-list');
+    if (!container) return;
+    container.innerHTML = education.map(e => `
+      <div class="card card-accent-left fade-up">
+        <div class="card-header">
+          <div class="card-meta">
+            <div>
+              <div class="card-title">${e.degree}</div>
+              <div class="card-desc">${e.institution}</div>
+            </div>
+            <span class="badge">${e.period}</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <p style="color:rgba(230,225,245,0.75);">${e.result}</p>
+        </div>
+      </div>`).join('');
+  })();
+</script>
 <script>
   const canvas = document.getElementById('smoke-canvas');
   const ctx = canvas.getContext('2d');
