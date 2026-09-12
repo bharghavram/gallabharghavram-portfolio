@@ -26,28 +26,87 @@
     </div>
   </div>
 </nav>
-<section id="home">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="fade-up">
-        <h1 class="hero-name">Galla Bharghav Ram</h1>
-        <p class="hero-role">AI Engineer | Generative AI Specialist | Python Full-Stack Developer</p>
-        <p class="hero-bio">I design and develop AI-powered applications, intelligent automation systems, and scalable full-stack solutions. My expertise spans Machine Learning, Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI Agents, and modern Python backend development to deliver measurable business value.</p>
-        <div class="hero-buttons">
-          <a href="mailto:bharghavramgalla@gmail.com" class="btn btn-primary"><i class="fa fa-envelope"></i> Get in Touch</a>
-          <a href="https://github.com/bharghavram" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-meta-item"><i class="fa fa-map-marker-alt"></i><span>Vijayawada, India</span></div>
-          <a href="https://linkedin.com/in/galla-bharghav-ram-b12a2a332" target="_blank" rel="noopener noreferrer" class="hero-meta-item" style="color:#bfdbfe; transition: var(--transition);"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-        </div>
-      </div>
-      <div class="hero-img-wrap fade-up" style="transition-delay:0.15s">
-        <img class="hero-img" src="profile.jpeg" alt="Galla Bharghav Ram" onerror="this.style.display='none'" />
-      </div>
-    </div>
+<section id="home" class="hero-section">
+
+  <!-- ── Cinematic AI video (right side, decorative) ── -->
+  <div class="hero-media" aria-hidden="true">
+    <video
+      class="hero-video"
+      src="public/hero-ai-network.mp4"
+      autoplay muted loop playsinline
+      preload="metadata"
+    ></video>
+    <!-- gradient layers that blend video into the page -->
+    <div class="hero-video-overlay"></div>
   </div>
+
+  <!-- ── Hero content (left side) ── -->
+  <div class="container hero-container">
+    <div class="hero-content">
+
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow hero-anim" style="--delay:0s">
+        AI Engineering &nbsp;·&nbsp; Automation &nbsp;·&nbsp; Software Development
+      </p>
+
+      <!-- Headline -->
+      <h1 class="hero-title hero-anim" style="--delay:0.10s">
+        I Build <span class="hero-accent">AI-Powered Products</span><br>
+        That Solve Real<br>Business Problems.
+      </h1>
+
+      <!-- Description -->
+      <p class="hero-description hero-anim" style="--delay:0.20s">
+        I help startups and businesses turn ideas into intelligent, scalable
+        software — from Generative AI and automation systems to full-stack
+        applications and production-ready APIs.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-actions hero-anim" style="--delay:0.30s">
+        <a href="#contact" class="btn btn-primary btn-hero">
+          Start a Project
+        </a>
+        <a href="#projects" class="btn btn-glass btn-hero">
+          View My Work
+          <i class="fa-solid fa-arrow-right" style="font-size:0.8em;"></i>
+        </a>
+      </div>
+
+      <!-- Expertise pills -->
+      <div class="hero-capabilities hero-anim" style="--delay:0.40s">
+        <span class="hero-cap">Generative AI</span>
+        <span class="hero-cap-sep"></span>
+        <span class="hero-cap">Machine Learning</span>
+        <span class="hero-cap-sep"></span>
+        <span class="hero-cap">Automation</span>
+        <span class="hero-cap-sep"></span>
+        <span class="hero-cap">Full-Stack</span>
+        <span class="hero-cap-sep"></span>
+        <span class="hero-cap">LLMs &amp; RAG</span>
+      </div>
+
+      <!-- Availability / location -->
+      <div class="hero-meta hero-anim" style="--delay:0.48s">
+        <span class="hero-available">
+          <span class="hero-dot"></span>
+          Available for selected projects
+        </span>
+        <span class="hero-meta-sep">·</span>
+        <span class="hero-location">
+          <i class="fa-solid fa-location-dot"></i>
+          Based in India &nbsp;·&nbsp; Working Worldwide
+        </span>
+      </div>
+
+    </div><!-- /.hero-content -->
+  </div><!-- /.container -->
+
+  
+
+
 </section>
+
 <section style="padding: 2.25rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
     <p style="text-align:center; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:1.5rem;">Building with</p>
@@ -74,7 +133,7 @@
     <h2 class="section-title fade-up">About Me</h2>
     <div class="about-grid">
       <div class="about-img-wrap fade-up">
-        <img class="about-img" src="profile.jpeg" alt="Galla Bharghav Ram" onerror="this.style.display='none'" />
+        <img class="about-img" src="public/profile.jpeg" alt="Galla Bharghav Ram" onerror="this.style.display='none'" />
       </div>
       <div class="about-text fade-up" style="transition-delay:0.1s">
         <p>I specialize in designing AI-driven software solutions that combine Machine Learning, Deep Learning, Generative AI, and modern web technologies. My work includes intelligent document processing, AI assistants, predictive analytics platforms, automation systems, and scalable web applications for businesses and startups.</p>
