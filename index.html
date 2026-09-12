@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galla Bharghav Ram — GenAI & Python Fullstack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Galla Bharghav Ram — AI Engineer &amp; Python Full-Stack Developer</title>
+  <meta name="description" content="Personal portfolio of Galla Bharghav Ram — AI Engineer, Generative AI Specialist, and Python Full-Stack Developer building intelligent software solutions." />
+  <meta name="theme-color" content="#0b0817" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Galla Bharghav Ram — AI Engineer &amp; Full-Stack Developer" />
+  <meta property="og:description" content="AI Engineer, Generative AI Specialist, and Python Full-Stack Developer building intelligent software solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="public/profile.jpeg" />
+
+  <!-- Preconnect & Preload Font Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+<!-- ── Navigation Bar ────────────────────────────────────────── -->
 <nav>
   <div class="container">
     <div class="nav-inner">
@@ -21,14 +37,16 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
 </nav>
-<section id="home" class="hero-section">
 
-  <!-- ── Cinematic AI video (right side, decorative) ── -->
+<!-- ── Hero Section ──────────────────────────────────────────── -->
+<section id="home" class="hero-section">
+  <!-- Cinematic AI video (decorative) -->
   <div class="hero-media" aria-hidden="true">
     <video
       class="hero-video"
@@ -36,346 +54,47 @@
       autoplay muted loop playsinline
       preload="metadata"
     ></video>
-    <!-- gradient layers that blend video into the page -->
     <div class="hero-video-overlay"></div>
   </div>
 
-  <!-- ── Hero content (left side) ── -->
+  <!-- Dynamic Hero Content Container -->
   <div class="container hero-container">
-    <div class="hero-content">
-
-      <!-- Eyebrow -->
-      <p class="hero-eyebrow hero-anim" style="--delay:0s">
-        AI Engineering &nbsp;·&nbsp; Automation &nbsp;·&nbsp; Software Development
-      </p>
-
-      <!-- Headline -->
-      <h1 class="hero-title hero-anim" style="--delay:0.10s">
-        I Build <span class="hero-accent">AI-Powered Products</span><br>
-        That Solve Real<br>Business Problems.
-      </h1>
-
-      <!-- Description -->
-      <p class="hero-description hero-anim" style="--delay:0.20s">
-        I help startups and businesses turn ideas into intelligent, scalable
-        software — from Generative AI and automation systems to full-stack
-        applications and production-ready APIs.
-      </p>
-
-      <!-- CTAs -->
-      <div class="hero-actions hero-anim" style="--delay:0.30s">
-        <a href="#contact" class="btn btn-primary btn-hero">
-          Start a Project
-        </a>
-        <a href="#projects" class="btn btn-glass btn-hero">
-          View My Work
-          <i class="fa-solid fa-arrow-right" style="font-size:0.8em;"></i>
-        </a>
-      </div>
-
-      <!-- Expertise pills -->
-      <div class="hero-capabilities hero-anim" style="--delay:0.40s">
-        <span class="hero-cap">Generative AI</span>
-        <span class="hero-cap-sep"></span>
-        <span class="hero-cap">Machine Learning</span>
-        <span class="hero-cap-sep"></span>
-        <span class="hero-cap">Automation</span>
-        <span class="hero-cap-sep"></span>
-        <span class="hero-cap">Full-Stack</span>
-        <span class="hero-cap-sep"></span>
-        <span class="hero-cap">LLMs &amp; RAG</span>
-      </div>
-
-      <!-- Availability / location -->
-      <div class="hero-meta hero-anim" style="--delay:0.48s">
-        <span class="hero-available">
-          <span class="hero-dot"></span>
-          Available for selected projects
-        </span>
-        <span class="hero-meta-sep">·</span>
-        <span class="hero-location">
-          <i class="fa-solid fa-location-dot"></i>
-          Based in India &nbsp;·&nbsp; Working Worldwide
-        </span>
-      </div>
-
-    </div><!-- /.hero-content -->
-  </div><!-- /.container -->
-
-  
-
-
-</section>
-
-<section style="padding: 2.25rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <div class="container">
-    <p style="text-align:center; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:1.5rem;">Building with</p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2.5rem 3rem;">
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem; transition:var(--transition);" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-brands fa-python"></i> Python</span>
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem;" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-brands fa-react"></i> React</span>
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem;" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-solid fa-flask"></i> Flask / FastAPI</span>
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem;" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-solid fa-robot"></i> LLMs &amp; GenAI</span>
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem;" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-solid fa-database"></i> MongoDB / SQL</span>
-      <span style="display:flex; align-items:center; gap:0.5rem; color:var(--muted); font-weight:600; font-size:1.05rem;" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--muted)'"><i class="fa-solid fa-brain"></i> TensorFlow</span>
-    </div>
+    <div id="hero-content-container" class="hero-content"></div>
   </div>
 </section>
+
+<!-- ── Tech Strip Section ────────────────────────────────────── -->
+<section style="padding: 2.25rem 0; background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div id="tech-strip-container" class="container"></div>
+</section>
+
+<!-- ── Services Section ──────────────────────────────────────── -->
 <section id="services" class="services-section">
   <div class="services-ambient" aria-hidden="true"></div>
   <div class="container">
-    <div class="services-header fade-up">
-      <p class="services-eyebrow">WHAT I CAN BUILD</p>
-      <h2 class="services-title">From Business Problems<br>to Intelligent Software.</h2>
-      <p class="services-sub">
-        I combine AI engineering, automation, and full-stack development to build practical software solutions that improve operations, accelerate workflows, and create new digital capabilities.
-      </p>
-    </div>
-
-    <div class="services-list">
-
-      <!-- 01 — Generative AI & LLM Solutions -->
-      <article class="service-card fade-up" style="transition-delay: 0.1s;">
-        <div class="service-card-inner">
-          <div class="service-meta">
-            <span class="service-num">01</span>
-            <div class="service-icon-wrap"><i class="fa-solid fa-brain service-icon"></i></div>
-          </div>
-          <div class="service-body">
-            <h3 class="service-name">Generative AI &amp; LLM Solutions</h3>
-            <p class="service-desc">
-              Build intelligent assistants, RAG systems, AI agents, document intelligence platforms, and domain-specific LLM applications designed around real business workflows.
-            </p>
-            <div class="service-caps">
-              <span class="service-cap">LLMs</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">RAG</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">AI Agents</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Document Intelligence</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">LLM Applications</span>
-            </div>
-          </div>
-          <div class="service-action">
-            <span class="service-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 02 — Intelligent Automation -->
-      <article class="service-card fade-up" style="transition-delay: 0.2s;">
-        <div class="service-card-inner">
-          <div class="service-meta">
-            <span class="service-num">02</span>
-            <div class="service-icon-wrap"><i class="fa-solid fa-gears service-icon"></i></div>
-          </div>
-          <div class="service-body">
-            <h3 class="service-name">Intelligent Automation</h3>
-            <p class="service-desc">
-              Turn repetitive business processes into intelligent automated workflows that reduce manual effort, improve consistency, and accelerate operations.
-            </p>
-            <div class="service-caps">
-              <span class="service-cap">Workflow Automation</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Data Processing</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Report Automation</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">AI Automation</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Process Optimization</span>
-            </div>
-          </div>
-          <div class="service-action">
-            <span class="service-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 03 — Machine Learning & Predictive AI -->
-      <article class="service-card fade-up" style="transition-delay: 0.3s;">
-        <div class="service-card-inner">
-          <div class="service-meta">
-            <span class="service-num">03</span>
-            <div class="service-icon-wrap"><i class="fa-solid fa-chart-line service-icon"></i></div>
-          </div>
-          <div class="service-body">
-            <h3 class="service-name">Machine Learning &amp; Predictive AI</h3>
-            <p class="service-desc">
-              Develop machine learning solutions that transform business data into predictions, classifications, insights, and actionable intelligence.
-            </p>
-            <div class="service-caps">
-              <span class="service-cap">Predictive Models</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Classification</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Data Analysis</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">Computer Vision</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">AI Analytics</span>
-            </div>
-          </div>
-          <div class="service-action">
-            <span class="service-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 04 — Full-Stack Product Engineering -->
-      <article class="service-card fade-up" style="transition-delay: 0.4s;">
-        <div class="service-card-inner">
-          <div class="service-meta">
-            <span class="service-num">04</span>
-            <div class="service-icon-wrap"><i class="fa-solid fa-code service-icon"></i></div>
-          </div>
-          <div class="service-body">
-            <h3 class="service-name">Full-Stack Product Engineering</h3>
-            <p class="service-desc">
-              Design and develop reliable business applications, APIs, dashboards, and web platforms that integrate AI capabilities with modern software architecture.
-            </p>
-            <div class="service-caps">
-              <span class="service-cap">Python</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">FastAPI / Flask</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">React</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">REST APIs</span>
-              <span class="service-cap-sep">•</span>
-              <span class="service-cap">SQL / MongoDB</span>
-            </div>
-          </div>
-          <div class="service-action">
-            <span class="service-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
-
-    </div><!-- /.services-list -->
-
-    <div class="services-footer fade-up" style="transition-delay: 0.5s;">
-      <p class="services-footer-text">
-        Need something more specific? I can design a custom AI or software solution around your workflow, data, and business requirements.
-      </p>
-      <a href="#contact" class="services-footer-cta">
-        Discuss a Project <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-  </div><!-- /.container -->
+    <div id="services-header-container" class="services-header fade-up"></div>
+    <div id="services-list-container" class="services-list"></div>
+    <div id="services-footer-container" class="services-footer fade-up" style="transition-delay: 0.5s;"></div>
+  </div>
 </section>
+
+<!-- ── About Section ─────────────────────────────────────────── -->
 <section id="about" class="about-section">
   <div class="about-ambient" aria-hidden="true"></div>
   <div class="container">
-    
-    <!-- Section Header -->
-    <div class="about-header fade-up">
-      <p class="about-eyebrow">ABOUT</p>
-      <h2 class="about-title">Building Intelligent Software<br>With a Product Mindset.</h2>
-      <p class="about-intro">
-        I specialize in designing and building AI-driven software solutions that connect intelligent technology with practical business needs.
-      </p>
-    </div>
-
-    <!-- Editorial Layout -->
+    <div id="about-header-container" class="about-header fade-up"></div>
     <div class="about-grid">
-
-      <!-- Left Profile Column -->
-      <div class="about-profile-col fade-up" style="transition-delay: 0.1s;">
-        <div class="about-image-card">
-          <div class="about-image-frame">
-            <img class="about-img" src="public/profile.jpeg" alt="Galla Bharghav Ram — AI Engineer" onerror="this.style.display='none'" />
-          </div>
-          <div class="about-identity-badge">
-            <span class="about-identity-role">AI ENGINEER</span>
-            <span class="about-identity-sub">Generative AI &nbsp;·&nbsp; Automation &nbsp;·&nbsp; Full-Stack</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Content Column -->
-      <div class="about-content-col fade-up" style="transition-delay: 0.15s;">
-
-        <!-- Narrative Paragraphs -->
-        <div class="about-text-block">
-          <p>
-            My work spans Machine Learning, Deep Learning, Generative AI, automation, and modern full-stack development. I build solutions such as intelligent document processing systems, AI assistants, predictive applications, automated workflows, and business-focused web platforms.
-          </p>
-          <p>
-            I work across the full development lifecycle — from understanding a problem and designing the solution to building APIs, integrating AI capabilities, developing interfaces, and preparing applications for deployment. My focus is on clean architecture, practical implementation, and software that delivers measurable value.
-          </p>
-        </div>
-
-        <!-- Credibility Metrics -->
-        <div class="about-metrics-grid fade-up" style="transition-delay: 0.25s;">
-          <div class="about-metric-card">
-            <div class="about-metric-num">5+</div>
-            <div class="about-metric-label">Client Solutions</div>
-          </div>
-          <div class="about-metric-card">
-            <div class="about-metric-num">15+</div>
-            <div class="about-metric-label">AI &amp; Software Projects</div>
-          </div>
-          <div class="about-metric-card">
-            <div class="about-metric-num">8.9</div>
-            <div class="about-metric-label">B.Tech CGPA</div>
-          </div>
-        </div>
-
-        <!-- How I Approach Technology -->
-        <div class="about-approach-block fade-up" style="transition-delay: 0.35s;">
-          <h3 class="about-approach-title">How I Approach Technology</h3>
-          <p class="about-approach-desc">
-            I focus on building solutions that are practical, maintainable, and aligned with the problem they are meant to solve. AI is not the objective by itself — it is a tool for creating better workflows, smarter applications, and useful business outcomes.
-          </p>
-
-          <!-- 3 Editorial Principles -->
-          <div class="about-principles-grid">
-            <div class="about-principle-card">
-              <span class="about-principle-num">01</span>
-              <div class="about-principle-content">
-                <strong class="about-principle-name">Problem First</strong>
-                <p class="about-principle-text">Understand the workflow and business requirement before choosing the technology.</p>
-              </div>
-            </div>
-
-            <div class="about-principle-card">
-              <span class="about-principle-num">02</span>
-              <div class="about-principle-content">
-                <strong class="about-principle-name">Build for Use</strong>
-                <p class="about-principle-text">Focus on practical, reliable software rather than technology for technology's sake.</p>
-              </div>
-            </div>
-
-            <div class="about-principle-card">
-              <span class="about-principle-num">03</span>
-              <div class="about-principle-content">
-                <strong class="about-principle-name">AI Where It Matters</strong>
-                <p class="about-principle-text">Apply AI where it can meaningfully improve automation, intelligence, or user experience.</p>
-              </div>
-            </div>
-          </div><!-- /.about-principles-grid -->
-        </div><!-- /.about-approach-block -->
-
-      </div><!-- /.about-content-col -->
-
-    </div><!-- /.about-grid -->
-
-  </div><!-- /.container -->
+      <div id="about-profile-container" class="about-profile-col fade-up" style="transition-delay: 0.1s;"></div>
+      <div id="about-content-container" class="about-content-col fade-up" style="transition-delay: 0.15s;"></div>
+    </div>
+  </div>
 </section>
+
+<!-- ── Experience Section ────────────────────────────────────── -->
 <section id="experience" class="exp-section">
   <div class="exp-ambient" aria-hidden="true"></div>
   <div class="container">
-    
-    <!-- Section Header -->
-    <div class="exp-header fade-up">
-      <p class="exp-eyebrow">EXPERIENCE</p>
-      <h2 class="exp-title">Building Across AI, Software &amp; Product Engineering.</h2>
-      <p class="exp-sub">
-        My experience spans AI engineering, full-stack development, client solutions, and technical mentorship — combining practical software development with emerging AI technologies.
-      </p>
-    </div>
+    <div id="exp-header-container" class="exp-header fade-up"></div>
 
     <!-- Subsection 1: Professional Experience -->
     <div class="exp-subsection fade-up">
@@ -392,14 +111,13 @@
       </h3>
       <div id="trainee-exp-grid" class="exp-training-grid"></div>
     </div>
-
-  </div><!-- /.container -->
+  </div>
 </section>
+
+<!-- ── Selected Work V2 (Projects) Section ──────────────────── -->
 <section id="projects" class="work-section">
   <div class="work-ambient" aria-hidden="true"></div>
   <div class="container">
-    
-    <!-- Section Header -->
     <div class="work-header fade-up">
       <p class="work-eyebrow">SELECTED WORK</p>
       <h2 class="work-title">Turning Business Problems<br>Into Intelligent Products.</h2>
@@ -408,68 +126,29 @@
       </p>
     </div>
 
-    <!-- Featured Projects Container (01, 02, 03) -->
+    <!-- Featured Projects Container -->
     <div id="featured-projects-container" class="work-featured-grid"></div>
 
-    <!-- Compact Projects Container (04, 05, 06) -->
+    <!-- Compact Projects Container -->
     <div id="compact-projects-container" class="work-compact-grid"></div>
-
-  </div><!-- /.container -->
+  </div>
 </section>
+
+<!-- ── The Engineering Stack (Skills) Section ────────────────── -->
 <section id="skills" class="stack-section">
   <div class="stack-ambient" aria-hidden="true"></div>
   <div class="container">
-    
-    <!-- Section Header -->
-    <div class="stack-header fade-up">
-      <p class="stack-eyebrow">THE ENGINEERING STACK</p>
-      <h2 class="stack-title">Technologies I Use to Build<br>Intelligent Software.</h2>
-      <p class="stack-sub">
-        From machine learning and Generative AI to backend systems and modern web applications, I work across the stack to turn ideas into usable software.
-      </p>
-    </div>
-
-    <!-- End-to-End Stack Capability Flow -->
-    <div class="stack-flow-banner fade-up">
-      <div class="stack-flow-step">
-        <span class="stack-flow-num">01</span>
-        <span class="stack-flow-text">AI Models &amp; RAG</span>
-      </div>
-      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
-      <div class="stack-flow-step">
-        <span class="stack-flow-num">02</span>
-        <span class="stack-flow-text">Data &amp; Embeddings</span>
-      </div>
-      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
-      <div class="stack-flow-step">
-        <span class="stack-flow-num">03</span>
-        <span class="stack-flow-text">Backend APIs &amp; Logic</span>
-      </div>
-      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
-      <div class="stack-flow-step">
-        <span class="stack-flow-num">04</span>
-        <span class="stack-flow-text">Product Interfaces</span>
-      </div>
-      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
-      <div class="stack-flow-step">
-        <span class="stack-flow-num">05</span>
-        <span class="stack-flow-text">Deployment &amp; Delivery</span>
-      </div>
-    </div>
-
-    <!-- Capabilities Grid -->
+    <div id="stack-header-container" class="stack-header fade-up"></div>
+    <div id="stack-flow-container" class="stack-flow-banner fade-up"></div>
     <div id="stack-capabilities-grid" class="stack-grid"></div>
-
-    <!-- Collaboration Section -->
     <div id="stack-collaboration-block" class="stack-collab-wrapper fade-up"></div>
-
-  </div><!-- /.container -->
+  </div>
 </section>
+
+<!-- ── Academic Foundation (Education) Section ──────────────── -->
 <section id="education" class="edu-section">
   <div class="edu-ambient" aria-hidden="true"></div>
   <div class="container">
-    
-    <!-- Section Header -->
     <div class="edu-header fade-up">
       <p class="edu-eyebrow">ACADEMIC FOUNDATION</p>
       <h2 class="edu-title">A Strong Foundation in Computer Science &amp; Technology.</h2>
@@ -478,639 +157,28 @@
       </p>
     </div>
 
-    <!-- Main Content Container -->
     <div id="edu-content-container" class="edu-container"></div>
-
-  </div><!-- /.container -->
+  </div>
 </section>
+
+<!-- ── Project CTA / Contact Section ────────────────────────── -->
 <section id="contact" class="contact-section">
   <div class="contact-ambient" aria-hidden="true"></div>
-  <div class="container">
-    
-    <!-- Hero Project CTA Box -->
-    <div class="contact-cta-box fade-up">
-      <p class="contact-eyebrow">START A PROJECT</p>
-      <h2 class="contact-title">Let's Build Something Useful.</h2>
-      <p class="contact-sub">
-        Have an AI idea, automation challenge, or software product in mind? Let's turn it into something real.
-      </p>
-      
-      <div class="contact-action-row">
-        <a href="mailto:bharghavramgalla@gmail.com?subject=Project%20Inquiry&amp;body=Hi%20Bharghav%2C%20I'd%20like%20to%20discuss%20a%20project..." class="contact-primary-btn">
-          <span>START A PROJECT</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-
-      <div class="contact-service-strip">
-        <span class="contact-service-tag">AI Engineering</span>
-        <span class="contact-service-dot" aria-hidden="true">•</span>
-        <span class="contact-service-tag">Generative AI</span>
-        <span class="contact-service-dot" aria-hidden="true">•</span>
-        <span class="contact-service-tag">Automation</span>
-        <span class="contact-service-dot" aria-hidden="true">•</span>
-        <span class="contact-service-tag">Full-Stack Development</span>
-      </div>
-    </div>
-
-    <!-- Direct Contact Row & Availability Footer -->
-    <div class="contact-details-block fade-up" style="transition-delay: 0.2s;">
-      <div class="contact-links-grid">
-        
-        <!-- Email -->
-        <a href="mailto:bharghavramgalla@gmail.com" class="contact-card">
-          <div class="contact-card-icon">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="contact-card-info">
-            <span class="contact-card-label">EMAIL</span>
-            <span class="contact-card-val">bharghavramgalla@gmail.com</span>
-          </div>
-          <div class="contact-card-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/bharghavram" target="_blank" rel="noopener noreferrer" class="contact-card">
-          <div class="contact-card-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="contact-card-info">
-            <span class="contact-card-label">GITHUB</span>
-            <span class="contact-card-val">github.com/bharghavram</span>
-          </div>
-          <div class="contact-card-arrow">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/galla-bharghav-ram-b12a2a332" target="_blank" rel="noopener noreferrer" class="contact-card">
-          <div class="contact-card-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </div>
-          <div class="contact-card-info">
-            <span class="contact-card-label">LINKEDIN</span>
-            <span class="contact-card-val">linkedin.com/in/galla-bharghav-ram</span>
-          </div>
-          <div class="contact-card-arrow">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Status Footer -->
-      <div class="contact-status-row">
-        <div class="contact-avail-badge">
-          <span class="contact-pulse-dot"></span>
-          <span>Available for selected projects</span>
-        </div>
-        <span class="contact-location">
-          <i class="fa-solid fa-location-dot"></i> Based in India · Working Worldwide
-        </span>
-      </div>
-    </div>
-
-  </div><!-- /.container -->
+  <div id="contact-container" class="container"></div>
 </section>
-<footer><div class="container"><p>© 2026 Galla Bharghav Ram. All rights reserved.</p></div></footer>
+
+<!-- ── Footer ────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <p>© 2026 Galla Bharghav Ram. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Background Ambient Particles Canvas -->
 <canvas id="smoke-canvas"></canvas>
+
+<!-- Scripts -->
 <script src="data.js"></script>
-<script>
-  // ── Render: Experience V2 ─────────────────────────────────
-  (function renderExperienceV2() {
-    const timelineContainer = document.getElementById('project-exp-timeline');
-    const trainingContainer = document.getElementById('trainee-exp-grid');
-    if (!timelineContainer || !trainingContainer || typeof experiences === 'undefined') return;
-
-    // Enriched metadata mapping
-    const projectMetadata = [
-      {
-        spec: "Full-Stack Development · AI Integration · Backend APIs",
-        badge: null,
-        featured: false,
-        tags: ["Python", "Web Frameworks", "REST APIs", "AI Integration", "Full-Stack"]
-      },
-      {
-        spec: "AI Solutions · Generative AI · Automation · Full-Stack Development",
-        badge: "CLIENT SOLUTIONS",
-        featured: true,
-        bullets: [
-          "Delivered AI-based solutions for 5+ clients, developing Machine Learning and Deep Learning models for prediction, classification, and anomaly detection.",
-          "Built Generative AI applications including document Q&A systems, AI assistants, and vector-database retrieval pipelines using LLMs.",
-          "Automated daily stock-market data segregation for a trading client using Python, Pandas, and Streamlit, and developed a full-stack ReactJS web platform.",
-          "Researched and built domain-specific AI solutions including a hybrid ML/DL prediction system and Qwen3.5 with LoRA fine-tuning for loan eligibility."
-        ],
-        tags: ["Python", "React", "LLMs", "RAG", "Vector DB", "Machine Learning", "Deep Learning", "Generative AI", "Automation"]
-      },
-      {
-        spec: "React · Backend APIs · Dashboards · Authentication",
-        badge: null,
-        featured: false,
-        tags: ["React", "JavaScript", "REST APIs", "Authentication", "Dashboards"]
-      }
-    ];
-
-    const trainingMetadata = [
-      {
-        tags: ["AI Fullstack", "LLM Apps", "Prompt Engineering", "Mentorship"]
-      },
-      {
-        tags: ["Generative AI", "RAG", "AI Agents", "LangChain", "Vector DB"]
-      }
-    ];
-
-    // Render Vertical Timeline Items
-    timelineContainer.innerHTML = experiences.projectExperience.map((item, idx) => {
-      const meta = projectMetadata[idx] || {};
-      const bullets = meta.bullets || item.bullets;
-      return `
-        <div class="exp-timeline-item ${meta.featured ? 'exp-featured' : ''} fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
-          <div class="exp-timeline-date">
-            <span class="exp-date-pill">${item.period}</span>
-            ${meta.badge ? `<span class="exp-client-badge">${meta.badge}</span>` : ''}
-          </div>
-          <div class="exp-timeline-marker" aria-hidden="true">
-            <div class="exp-timeline-node"></div>
-            <div class="exp-timeline-line"></div>
-          </div>
-          <div class="exp-timeline-card">
-            <div class="exp-card-header">
-              <h4 class="exp-company">${item.company}</h4>
-              <h5 class="exp-role">${item.title}</h5>
-              <p class="exp-spec">${meta.spec}</p>
-            </div>
-            <ul class="exp-bullets">
-              ${bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
-            </ul>
-            <div class="exp-tags">
-              ${meta.tags.map(t => `<span class="exp-tag">${t}</span>`).join('')}
-            </div>
-          </div>
-        </div>`;
-    }).join('');
-
-    // Render Training & Mentorship Cards
-    trainingContainer.innerHTML = experiences.traineeExperience.map((item, idx) => {
-      const meta = trainingMetadata[idx] || { tags: [] };
-      return `
-        <div class="exp-training-card fade-up" style="transition-delay: ${0.3 + idx * 0.1}s;">
-          <div class="exp-training-top">
-            <span class="exp-training-badge">${item.period}</span>
-            <h4 class="exp-training-title">${item.title}</h4>
-            <p class="exp-training-company">${item.company}</p>
-          </div>
-          <ul class="exp-bullets">
-            ${item.bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
-          </ul>
-          <div class="exp-tags">
-            ${meta.tags.map(t => `<span class="exp-tag">${t}</span>`).join('')}
-          </div>
-        </div>`;
-    }).join('');
-  })();
-
-  // ── Render: Projects V2 (Selected Work) ───────────────────
-  (function renderProjectsV2() {
-    const featuredContainer = document.getElementById('featured-projects-container');
-    const compactContainer = document.getElementById('compact-projects-container');
-    if (!featuredContainer || !compactContainer || typeof projects === 'undefined') return;
-
-    // Enriched metadata mapping (Source of truth: projects in data.js)
-    const projectConfigs = [
-      // 0: Stock Market Data Segregation
-      {
-        num: "01",
-        category: "CLIENT SOLUTION",
-        isFeatured: true,
-        concept: "Automating repetitive market-data processing workflows for a trading client.",
-        problem: "Repetitive manual stock-market data segregation causing processing overhead and analysis delays.",
-        solution: "Python & Streamlit automated processing pipeline for real-time segregation and structured monitoring.",
-        ctaText: null,
-        ctaUrl: null
-      },
-      // 1: Sports Company Website
-      {
-        num: "04",
-        category: "FULL-STACK / WEB",
-        isFeatured: false,
-        concept: null,
-        problem: null,
-        solution: null,
-        ctaText: "Visit Website",
-        ctaUrl: "https://primesport.in/"
-      },
-      // 2: Hybrid House Price Prediction
-      {
-        num: "05",
-        category: "RESEARCH / MACHINE LEARNING",
-        isFeatured: false,
-        concept: null,
-        problem: null,
-        solution: null,
-        ctaText: null,
-        ctaUrl: null
-      },
-      // 3: Loan Eligibility Prediction
-      {
-        num: "06",
-        category: "GENERATIVE AI / MACHINE LEARNING",
-        isFeatured: false,
-        concept: null,
-        problem: null,
-        solution: null,
-        ctaText: null,
-        ctaUrl: null
-      },
-      // 4: AI Question Generator
-      {
-        num: "02",
-        category: "GENERATIVE AI / SaaS",
-        isFeatured: true,
-        concept: "Turning study materials into structured exam questions using Retrieval-Augmented Generation.",
-        problem: "Time-consuming manual creation of exam questions, quizzes, and assessment materials for educators.",
-        solution: "SaaS platform using PyMuPDF parsing, ChromaDB vector embeddings, and RAG pipelines to generate structured tests in seconds.",
-        ctaText: null,
-        ctaUrl: null
-      },
-      // 5: Financial Auditing Intelligence System
-      {
-        num: "03",
-        category: "GENERATIVE AI / AUTOMATION",
-        isFeatured: true,
-        concept: "Transforming unstructured financial documents into structured audit intelligence.",
-        problem: "Unstructured financial PDFs requiring complex manual analysis and risk assessment by auditing teams.",
-        solution: "AI audit pipeline combining PyPDF2 extraction, Hugging Face embeddings, and Gemini 2.5 Flash for context-driven risk reports.",
-        ctaText: null,
-        ctaUrl: null
-      }
-    ];
-
-    // Enrich data.js project items with configs
-    const enrichedProjects = projects.map((p, idx) => {
-      let cfg = projectConfigs[idx] || { num: `0${idx+1}`, category: "AI / SOFTWARE", isFeatured: false };
-      if (p.title.includes("Stock Market")) cfg = projectConfigs[0];
-      else if (p.title.includes("Sports")) cfg = projectConfigs[1];
-      else if (p.title.includes("House Price")) cfg = projectConfigs[2];
-      else if (p.title.includes("Loan Eligibility")) cfg = projectConfigs[3];
-      else if (p.title.includes("Question Generator")) cfg = projectConfigs[4];
-      else if (p.title.includes("Financial Auditing")) cfg = projectConfigs[5];
-      return { ...p, ...cfg };
-    });
-
-    const featuredItems = enrichedProjects.filter(p => p.isFeatured);
-    const compactItems = enrichedProjects.filter(p => !p.isFeatured);
-
-    // Render Featured Cards (01, 02, 03)
-    featuredContainer.innerHTML = featuredItems.map((p, idx) => `
-      <article class="work-featured-card fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
-        <div class="work-card-inner">
-          <div class="work-card-header">
-            <div class="work-card-meta">
-              <span class="work-category">${p.category}</span>
-              <span class="work-num">${p.num}</span>
-            </div>
-            <h3 class="work-card-title">${p.title}</h3>
-            <p class="work-card-concept">${p.concept}</p>
-          </div>
-
-          <div class="work-story-grid">
-            <div class="work-story-item">
-              <span class="work-story-label">PROBLEM</span>
-              <p class="work-story-text">${p.problem}</p>
-            </div>
-            <div class="work-story-item">
-              <span class="work-story-label">SOLUTION</span>
-              <p class="work-story-text">${p.solution}</p>
-            </div>
-          </div>
-
-          <div class="work-achievements">
-            <span class="work-story-label">KEY DELIVERABLES</span>
-            <ul class="work-bullets">
-              ${p.achievements.map(a => `<li class="work-bullet">${a}</li>`).join('')}
-            </ul>
-          </div>
-
-          <div class="work-card-footer">
-            <div class="work-tags">
-              ${p.tags.map(t => `<span class="work-tag">${t}</span>`).join('')}
-            </div>
-            ${(p.url || p.ctaUrl) ? `
-              <a href="${p.url || p.ctaUrl}" target="_blank" rel="noopener noreferrer" class="work-cta-btn">
-                ${p.ctaText || 'View Project'} <i class="fa-solid fa-arrow-right"></i>
-              </a>` : ''}
-          </div>
-        </div>
-      </article>
-    `).join('');
-
-    // Render Compact Cards (04, 05, 06)
-    compactContainer.innerHTML = compactItems.map((p, idx) => `
-      <article class="work-compact-card fade-up" style="transition-delay: ${0.3 + idx * 0.1}s;">
-        <div class="work-compact-inner">
-          <div class="work-compact-header">
-            <span class="work-category">${p.category}</span>
-            <span class="work-num">${p.num}</span>
-          </div>
-          <h4 class="work-compact-title">${p.title}</h4>
-          <p class="work-compact-desc">${p.description}</p>
-          <div class="work-tags" style="margin-top:auto;">
-            ${p.tags.map(t => `<span class="work-tag">${t}</span>`).join('')}
-          </div>
-          ${(p.url || p.ctaUrl) ? `
-            <div class="work-compact-action" style="margin-top:0.75rem;">
-              <a href="${p.url || p.ctaUrl}" target="_blank" rel="noopener noreferrer" class="work-cta-link">
-                ${p.ctaText || 'Visit Website'} <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>` : ''}
-        </div>
-      </article>
-    `).join('');
-  })();
-
-  // ── Render: Skills V2 (The Engineering Stack) ─────────────
-  (function renderSkillsV2() {
-    const container = document.getElementById('stack-capabilities-grid');
-    const collabContainer = document.getElementById('stack-collaboration-block');
-    if (!container || typeof technicalSkills === 'undefined') return;
-
-    const stackCategories = [
-      // 01 — AI & GENERATIVE AI (CORE)
-      {
-        num: "01",
-        category: "AI & GENERATIVE AI",
-        isCore: true,
-        badge: "CORE CAPABILITY",
-        description: "Designing intelligent applications around LLMs, retrieval, agents, and domain-specific AI workflows.",
-        groups: [
-          {
-            label: "LLMs & Agentic Architectures",
-            tags: ["Large Language Models / LLMs", "RAG", "LangChain", "LangFlow", "Multi-Agent Systems", "MCP Server", "Generative AI"]
-          },
-          {
-            label: "Model Customization & Embeddings",
-            tags: ["Hugging Face", "Fine-tuning", "Prompt Engineering", "Vector DB Retrieval"]
-          },
-          {
-            label: "AI Applications",
-            tags: ["Conversational Assistants", "Document Intelligence", "AI Application Development"]
-          }
-        ]
-      },
-      // 02 — MACHINE LEARNING & COMPUTER VISION
-      {
-        num: "02",
-        category: "MACHINE LEARNING & COMPUTER VISION",
-        isCore: false,
-        badge: null,
-        description: "Building predictive, classification, analytical, and computer-vision solutions using modern ML and DL frameworks.",
-        groups: [
-          {
-            label: "Frameworks & Libraries",
-            tags: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "OpenCV"]
-          },
-          {
-            label: "Data Science & Analysis",
-            tags: ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
-          },
-          {
-            label: "Core Domains",
-            tags: ["Neural Networks", "Deep Learning", "Computer Vision", "Time Series Analysis", "NLP", "Regression & Classification"]
-          }
-        ]
-      },
-      // 03 — FULL-STACK ENGINEERING
-      {
-        num: "03",
-        category: "FULL-STACK ENGINEERING",
-        isCore: false,
-        badge: null,
-        description: "Building the application layer around AI — from APIs and backend services to responsive web interfaces and data systems.",
-        groups: [
-          {
-            label: "Languages & Core",
-            tags: ["Python", "JavaScript", "HTML", "CSS"]
-          },
-          {
-            label: "Backend & APIs",
-            tags: ["FastAPI", "Flask", "REST APIs", "API Routing", "CRUD"]
-          },
-          {
-            label: "Frontend & Databases",
-            tags: ["React.js", "DOM", "AJAX", "SQL", "MySQL", "SQLite", "MongoDB"]
-          }
-        ]
-      },
-      // 04 — AI PRODUCT DEVELOPMENT
-      {
-        num: "04",
-        category: "AI PRODUCT DEVELOPMENT",
-        isCore: false,
-        badge: null,
-        description: "Using modern AI-assisted development and creative tools to accelerate product design, interfaces, prototypes, and digital experiences.",
-        groups: [
-          {
-            label: "AI Assistants & Builders",
-            tags: ["Claude", "GPT", "Gemini", "BoltAI", "Lovable AI"]
-          },
-          {
-            label: "UI & Creative Tech",
-            tags: ["Figma", "Google Flow", "Stitch", "Prompt-to-UI", "AI Video Generation", "Motion Graphics", "3D Animated Videos"]
-          }
-        ]
-      },
-      // 05 — DATA, CLOUD & DELIVERY
-      {
-        num: "05",
-        category: "DATA, CLOUD & DELIVERY",
-        isCore: false,
-        badge: null,
-        description: "Working with data stores, version control, hosting, and deployment-oriented tooling.",
-        groups: [
-          {
-            label: "Deployment & Hosting",
-            tags: ["Git", "GitHub Pages", "Hostinger", "AWS S3"]
-          },
-          {
-            label: "Interactive Apps & Data",
-            tags: ["Streamlit", "SQL Databases", "MongoDB", "Data Pipelines"]
-          }
-        ]
-      }
-    ];
-
-    container.innerHTML = stackCategories.map((cat, idx) => `
-      <article class="stack-card ${cat.isCore ? 'stack-card-core' : ''} fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
-        <div class="stack-card-inner">
-          <div class="stack-card-header">
-            <div class="stack-card-meta">
-              <span class="stack-category">${cat.category}</span>
-              <div class="stack-meta-right">
-                ${cat.badge ? `<span class="stack-core-badge">${cat.badge}</span>` : ''}
-                <span class="stack-num">${cat.num}</span>
-              </div>
-            </div>
-            <p class="stack-card-desc">${cat.description}</p>
-          </div>
-
-          <div class="stack-groups">
-            ${cat.groups.map(g => `
-              <div class="stack-group">
-                <h4 class="stack-group-label">${g.label}</h4>
-                <div class="stack-tags">
-                  ${g.tags.map(t => `<span class="stack-tag ${cat.isCore ? 'stack-tag-core' : ''}">${t}</span>`).join('')}
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </article>
-    `).join('');
-
-    if (collabContainer) {
-      const softSkills = (technicalSkills && technicalSkills.softSkills) ? technicalSkills.softSkills : [
-        "Team Leadership", "Mentoring", "Technical Documentation", "Client Communication", "Agile Methodologies", "Public Speaking"
-      ];
-      collabContainer.innerHTML = `
-        <div class="stack-collab-inner">
-          <div class="stack-collab-header">
-            <span class="stack-collab-eyebrow">COLLABORATION</span>
-            <h3 class="stack-collab-title">Execution &amp; Leadership Capabilities</h3>
-            <p class="stack-collab-desc">Technical delivery also depends on clear communication, mentoring, documentation, and collaborative execution.</p>
-          </div>
-          <div class="stack-collab-grid">
-            ${softSkills.map(sk => `
-              <div class="stack-collab-pill">
-                <i class="fa-solid fa-check stack-collab-icon"></i>
-                <span>${sk}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-    }
-  })();
-
-  // ── Render: Education V2 (Academic Foundation) ────────────
-  (function renderEducationV2() {
-    const container = document.getElementById('edu-content-container');
-    if (!container || typeof education === 'undefined') return;
-
-    const btech = education.find(e => e.degree.includes("B.Tech")) || education[0];
-    const secondaryList = education.filter(e => e !== btech);
-
-    // Extract score format (e.g. 8.9 CGPA)
-    const cgpaMatch = btech.result ? btech.result.match(/[\d\.]+/) : null;
-    const cgpaValue = cgpaMatch ? cgpaMatch[0] : "8.9";
-    const cgpaLabel = btech.result ? btech.result.replace(/[\d\.\:]/g, '').trim() || "CGPA" : "CGPA";
-
-    container.innerHTML = `
-      <!-- Primary Academic Card -->
-      <article class="edu-primary-card fade-up">
-        <div class="edu-card-inner">
-          <div class="edu-card-main">
-            <span class="edu-degree-badge">DEGREE &amp; SPECIALIZATION</span>
-            <h3 class="edu-degree-title">${btech.degree}</h3>
-            <div class="edu-meta-row">
-              <span class="edu-institution"><i class="fa-solid fa-building-columns"></i> ${btech.institution}</span>
-              <span class="edu-period"><i class="fa-solid fa-calendar-days"></i> ${btech.period}</span>
-            </div>
-            <div class="edu-tags">
-              <span class="edu-tag">Artificial Intelligence</span>
-              <span class="edu-tag">Machine Learning</span>
-              <span class="edu-tag">Software Engineering</span>
-            </div>
-          </div>
-          <div class="edu-stat-box">
-            <span class="edu-stat-val">${cgpaValue}</span>
-            <span class="edu-stat-label">${cgpaLabel}</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Secondary Academic Credentials -->
-      ${secondaryList.length > 0 ? `
-        <div class="edu-secondary-grid">
-          ${secondaryList.map((sec, idx) => {
-            const valMatch = sec.result ? sec.result.match(/[\d\.\%]+/) : null;
-            const val = valMatch ? valMatch[0] : sec.result;
-            const label = sec.result ? sec.result.replace(/[\d\.\%\:]/g, '').trim() || "Score" : "Score";
-            return `
-              <div class="edu-secondary-card fade-up" style="transition-delay: ${0.2 + idx * 0.1}s;">
-                <div class="edu-secondary-header">
-                  <h4 class="edu-secondary-title">${sec.degree}</h4>
-                  <span class="edu-secondary-score">${val} ${label}</span>
-                </div>
-                <p class="edu-secondary-inst">${sec.institution}</p>
-                <span class="edu-secondary-period">${sec.period}</span>
-              </div>
-            `;
-          }).join('')}
-        </div>
-      ` : ''}
-    `;
-  })();
-</script>
-<script>
-  const canvas = document.getElementById('smoke-canvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
-  let mouse = { x: -200, y: -200 };
-  let particles = [];
-  window.addEventListener('mousemove', e => {
-    mouse.x = e.clientX; mouse.y = e.clientY;
-    for (let i = 0; i < 4; i++) { particles.push(new SmokeParticle(mouse.x, mouse.y)); }
-  });
-  class SmokeParticle {
-    constructor(x, y) {
-      this.x = x + (Math.random() - 0.5) * 10;
-      this.y = y + (Math.random() - 0.5) * 10;
-      this.size = Math.random() * 18 + 8;
-      this.speedX = (Math.random() - 0.5) * 1.2;
-      this.speedY = -(Math.random() * 1.5 + 0.5);
-      this.life = 1.0;
-      this.decay = Math.random() * 0.018 + 0.012;
-      const r = Math.floor(139 + Math.random() * 60);
-      const g = Math.floor(80 + Math.random() * 60);
-      const b = Math.floor(230 + Math.random() * 25);
-      this.color = `${r},${g},${b}`;
-    }
-    update() {
-      this.x += this.speedX; this.y += this.speedY;
-      this.speedX *= 0.98; this.speedY *= 0.97;
-      this.size += 0.35; this.life -= this.decay;
-    }
-    draw() {
-      ctx.save();
-      const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-      gradient.addColorStop(0,   `rgba(${this.color},${this.life * 0.22})`);
-      gradient.addColorStop(0.5, `rgba(${this.color},${this.life * 0.10})`);
-      gradient.addColorStop(1,   `rgba(${this.color},0)`);
-      ctx.fillStyle = gradient;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-    }
-  }
-  function animateSmoke() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles = particles.filter(p => p.life > 0);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animateSmoke);
-  }
-  animateSmoke();
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); navLinks.classList.toggle('open'); });
-  navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { hamburger.classList.remove('open'); navLinks.classList.remove('open'); }); });
-  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } }); }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
+<script src="script.js"></script>
 </body>
 </html>
