@@ -364,22 +364,36 @@
 
   </div><!-- /.container -->
 </section>
-<section id="experience">
+<section id="experience" class="exp-section">
+  <div class="exp-ambient" aria-hidden="true"></div>
   <div class="container">
-    <h2 class="section-title fade-up">Professional Experience</h2>
-    <div class="exp-sub-header fade-up">
-      <div class="exp-sub-icon green"><i class="fa-solid fa-laptop-code"></i></div>
-      <span class="exp-sub-title">Project Experience</span>
-      <div class="exp-sub-line"></div>
+    
+    <!-- Section Header -->
+    <div class="exp-header fade-up">
+      <p class="exp-eyebrow">EXPERIENCE</p>
+      <h2 class="exp-title">Building Across AI, Software &amp; Product Engineering.</h2>
+      <p class="exp-sub">
+        My experience spans AI engineering, full-stack development, client solutions, and technical mentorship — combining practical software development with emerging AI technologies.
+      </p>
     </div>
-    <div id="project-exp-list" class="exp-list"></div>
-    <div class="exp-sub-header fade-up" style="margin-top:3rem;">
-      <div class="exp-sub-icon purple"><i class="fa-solid fa-chalkboard-user"></i></div>
-      <span class="exp-sub-title">Trainee Experience</span>
-      <div class="exp-sub-line"></div>
+
+    <!-- Subsection 1: Professional Experience -->
+    <div class="exp-subsection fade-up">
+      <h3 class="exp-subsection-title">
+        <i class="fa-solid fa-briefcase exp-icon"></i> PROFESSIONAL EXPERIENCE
+      </h3>
+      <div id="project-exp-timeline" class="exp-timeline"></div>
     </div>
-    <div id="trainee-exp-list" class="exp-list"></div>
-  </div>
+
+    <!-- Subsection 2: Training & Mentorship -->
+    <div class="exp-subsection fade-up" style="margin-top: 4.5rem;">
+      <h3 class="exp-subsection-title">
+        <i class="fa-solid fa-chalkboard-user exp-icon"></i> TRAINING &amp; MENTORSHIP
+      </h3>
+      <div id="trainee-exp-grid" class="exp-training-grid"></div>
+    </div>
+
+  </div><!-- /.container -->
 </section>
 <section id="projects" class="section-alt">
   <div class="container">
@@ -418,30 +432,98 @@
 <canvas id="smoke-canvas"></canvas>
 <script src="data.js"></script>
 <script>
-  // ── Render: Experiences ────────────────────────────────────
-  function renderExpList(containerId, items) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = items.map(exp => `
-      <div class="card ${exp.cardClass} fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div>
-              <div class="card-title">${exp.title}</div>
-              <div class="card-desc">${exp.company}</div>
-            </div>
-            <span class="badge ${exp.badgeClass}">${exp.period}</span>
+  // ── Render: Experience V2 ─────────────────────────────────
+  (function renderExperienceV2() {
+    const timelineContainer = document.getElementById('project-exp-timeline');
+    const trainingContainer = document.getElementById('trainee-exp-grid');
+    if (!timelineContainer || !trainingContainer || typeof experiences === 'undefined') return;
+
+    // Enriched metadata mapping
+    const projectMetadata = [
+      {
+        spec: "Full-Stack Development · AI Integration · Backend APIs",
+        badge: null,
+        featured: false,
+        tags: ["Python", "Web Frameworks", "REST APIs", "AI Integration", "Full-Stack"]
+      },
+      {
+        spec: "AI Solutions · Generative AI · Automation · Full-Stack Development",
+        badge: "CLIENT SOLUTIONS",
+        featured: true,
+        bullets: [
+          "Delivered AI-based solutions for 5+ clients, developing Machine Learning and Deep Learning models for prediction, classification, and anomaly detection.",
+          "Built Generative AI applications including document Q&A systems, AI assistants, and vector-database retrieval pipelines using LLMs.",
+          "Automated daily stock-market data segregation for a trading client using Python, Pandas, and Streamlit, and developed a full-stack ReactJS web platform.",
+          "Researched and built domain-specific AI solutions including a hybrid ML/DL prediction system and Qwen3.5 with LoRA fine-tuning for loan eligibility."
+        ],
+        tags: ["Python", "React", "LLMs", "RAG", "Vector DB", "Machine Learning", "Deep Learning", "Generative AI", "Automation"]
+      },
+      {
+        spec: "React · Backend APIs · Dashboards · Authentication",
+        badge: null,
+        featured: false,
+        tags: ["React", "JavaScript", "REST APIs", "Authentication", "Dashboards"]
+      }
+    ];
+
+    const trainingMetadata = [
+      {
+        tags: ["AI Fullstack", "LLM Apps", "Prompt Engineering", "Mentorship"]
+      },
+      {
+        tags: ["Generative AI", "RAG", "AI Agents", "LangChain", "Vector DB"]
+      }
+    ];
+
+    // Render Vertical Timeline Items
+    timelineContainer.innerHTML = experiences.projectExperience.map((item, idx) => {
+      const meta = projectMetadata[idx] || {};
+      const bullets = meta.bullets || item.bullets;
+      return `
+        <div class="exp-timeline-item ${meta.featured ? 'exp-featured' : ''} fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
+          <div class="exp-timeline-date">
+            <span class="exp-date-pill">${item.period}</span>
+            ${meta.badge ? `<span class="exp-client-badge">${meta.badge}</span>` : ''}
           </div>
-        </div>
-        <div class="card-content">
+          <div class="exp-timeline-marker" aria-hidden="true">
+            <div class="exp-timeline-node"></div>
+            <div class="exp-timeline-line"></div>
+          </div>
+          <div class="exp-timeline-card">
+            <div class="exp-card-header">
+              <h4 class="exp-company">${item.company}</h4>
+              <h5 class="exp-role">${item.title}</h5>
+              <p class="exp-spec">${meta.spec}</p>
+            </div>
+            <ul class="exp-bullets">
+              ${bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
+            </ul>
+            <div class="exp-tags">
+              ${meta.tags.map(t => `<span class="exp-tag">${t}</span>`).join('')}
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+
+    // Render Training & Mentorship Cards
+    trainingContainer.innerHTML = experiences.traineeExperience.map((item, idx) => {
+      const meta = trainingMetadata[idx] || { tags: [] };
+      return `
+        <div class="exp-training-card fade-up" style="transition-delay: ${0.3 + idx * 0.1}s;">
+          <div class="exp-training-top">
+            <span class="exp-training-badge">${item.period}</span>
+            <h4 class="exp-training-title">${item.title}</h4>
+            <p class="exp-training-company">${item.company}</p>
+          </div>
           <ul class="exp-bullets">
-            ${exp.bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
+            ${item.bullets.map(b => `<li class="exp-bullet">${b}</li>`).join('')}
           </ul>
-        </div>
-      </div>`).join('');
-  }
-  renderExpList('project-exp-list', experiences.projectExperience);
-  renderExpList('trainee-exp-list', experiences.traineeExperience);
+          <div class="exp-tags">
+            ${meta.tags.map(t => `<span class="exp-tag">${t}</span>`).join('')}
+          </div>
+        </div>`;
+    }).join('');
+  })();
 
   // ── Render: Projects ───────────────────────────────────────
   (function renderProjects() {
