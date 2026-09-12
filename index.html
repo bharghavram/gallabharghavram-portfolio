@@ -465,22 +465,115 @@
 
   </div><!-- /.container -->
 </section>
-<section class="section-alt">
+<section id="education" class="edu-section">
+  <div class="edu-ambient" aria-hidden="true"></div>
   <div class="container">
-    <h2 class="section-title fade-up">Education</h2>
-    <div id="edu-list" class="edu-list"></div>
-  </div>
-</section>
-<section id="contact" class="section-dark" style="text-align:center;">
-  <div class="container">
-    <h2 class="section-title fade-up" style="display:block;">Let's Connect</h2>
-    <p class="contact-desc fade-up">Looking for an AI Engineer or Python Full-Stack Developer to build your next product? Let's discuss how AI, automation, and scalable software can accelerate your business.</p>
-    <div class="contact-buttons fade-up">
-      <a href="mailto:bharghavramgalla@gmail.com" class="btn btn-primary btn-lg"><i class="fa fa-envelope"></i> Email Me</a>
-      <a href="https://github.com/bharghavram" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://linkedin.com/in/galla-bharghav-ram-b12a2a332" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    
+    <!-- Section Header -->
+    <div class="edu-header fade-up">
+      <p class="edu-eyebrow">ACADEMIC FOUNDATION</p>
+      <h2 class="edu-title">A Strong Foundation in Computer Science &amp; Technology.</h2>
+      <p class="edu-sub">
+        My academic background provides the foundation for my work across software engineering, artificial intelligence, and intelligent systems.
+      </p>
     </div>
-  </div>
+
+    <!-- Main Content Container -->
+    <div id="edu-content-container" class="edu-container"></div>
+
+  </div><!-- /.container -->
+</section>
+<section id="contact" class="contact-section">
+  <div class="contact-ambient" aria-hidden="true"></div>
+  <div class="container">
+    
+    <!-- Hero Project CTA Box -->
+    <div class="contact-cta-box fade-up">
+      <p class="contact-eyebrow">START A PROJECT</p>
+      <h2 class="contact-title">Let's Build Something Useful.</h2>
+      <p class="contact-sub">
+        Have an AI idea, automation challenge, or software product in mind? Let's turn it into something real.
+      </p>
+      
+      <div class="contact-action-row">
+        <a href="mailto:bharghavramgalla@gmail.com?subject=Project%20Inquiry&amp;body=Hi%20Bharghav%2C%20I'd%20like%20to%20discuss%20a%20project..." class="contact-primary-btn">
+          <span>START A PROJECT</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="contact-service-strip">
+        <span class="contact-service-tag">AI Engineering</span>
+        <span class="contact-service-dot" aria-hidden="true">•</span>
+        <span class="contact-service-tag">Generative AI</span>
+        <span class="contact-service-dot" aria-hidden="true">•</span>
+        <span class="contact-service-tag">Automation</span>
+        <span class="contact-service-dot" aria-hidden="true">•</span>
+        <span class="contact-service-tag">Full-Stack Development</span>
+      </div>
+    </div>
+
+    <!-- Direct Contact Row & Availability Footer -->
+    <div class="contact-details-block fade-up" style="transition-delay: 0.2s;">
+      <div class="contact-links-grid">
+        
+        <!-- Email -->
+        <a href="mailto:bharghavramgalla@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">EMAIL</span>
+            <span class="contact-card-val">bharghavramgalla@gmail.com</span>
+          </div>
+          <div class="contact-card-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/bharghavram" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">GITHUB</span>
+            <span class="contact-card-val">github.com/bharghavram</span>
+          </div>
+          <div class="contact-card-arrow">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/galla-bharghav-ram-b12a2a332" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="contact-card-info">
+            <span class="contact-card-label">LINKEDIN</span>
+            <span class="contact-card-val">linkedin.com/in/galla-bharghav-ram</span>
+          </div>
+          <div class="contact-card-arrow">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Status Footer -->
+      <div class="contact-status-row">
+        <div class="contact-avail-badge">
+          <span class="contact-pulse-dot"></span>
+          <span>Available for selected projects</span>
+        </div>
+        <span class="contact-location">
+          <i class="fa-solid fa-location-dot"></i> Based in India · Working Worldwide
+        </span>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
 </section>
 <footer><div class="container"><p>© 2026 Galla Bharghav Ram. All rights reserved.</p></div></footer>
 <canvas id="smoke-canvas"></canvas>
@@ -901,25 +994,64 @@
     }
   })();
 
-  // ── Render: Education ──────────────────────────────────────
-  (function renderEducation() {
-    const container = document.getElementById('edu-list');
-    if (!container) return;
-    container.innerHTML = education.map(e => `
-      <div class="card card-accent-left fade-up">
-        <div class="card-header">
-          <div class="card-meta">
-            <div>
-              <div class="card-title">${e.degree}</div>
-              <div class="card-desc">${e.institution}</div>
+  // ── Render: Education V2 (Academic Foundation) ────────────
+  (function renderEducationV2() {
+    const container = document.getElementById('edu-content-container');
+    if (!container || typeof education === 'undefined') return;
+
+    const btech = education.find(e => e.degree.includes("B.Tech")) || education[0];
+    const secondaryList = education.filter(e => e !== btech);
+
+    // Extract score format (e.g. 8.9 CGPA)
+    const cgpaMatch = btech.result ? btech.result.match(/[\d\.]+/) : null;
+    const cgpaValue = cgpaMatch ? cgpaMatch[0] : "8.9";
+    const cgpaLabel = btech.result ? btech.result.replace(/[\d\.\:]/g, '').trim() || "CGPA" : "CGPA";
+
+    container.innerHTML = `
+      <!-- Primary Academic Card -->
+      <article class="edu-primary-card fade-up">
+        <div class="edu-card-inner">
+          <div class="edu-card-main">
+            <span class="edu-degree-badge">DEGREE &amp; SPECIALIZATION</span>
+            <h3 class="edu-degree-title">${btech.degree}</h3>
+            <div class="edu-meta-row">
+              <span class="edu-institution"><i class="fa-solid fa-building-columns"></i> ${btech.institution}</span>
+              <span class="edu-period"><i class="fa-solid fa-calendar-days"></i> ${btech.period}</span>
             </div>
-            <span class="badge">${e.period}</span>
+            <div class="edu-tags">
+              <span class="edu-tag">Artificial Intelligence</span>
+              <span class="edu-tag">Machine Learning</span>
+              <span class="edu-tag">Software Engineering</span>
+            </div>
+          </div>
+          <div class="edu-stat-box">
+            <span class="edu-stat-val">${cgpaValue}</span>
+            <span class="edu-stat-label">${cgpaLabel}</span>
           </div>
         </div>
-        <div class="card-content">
-          <p style="color:rgba(230,225,245,0.75);">${e.result}</p>
+      </article>
+
+      <!-- Secondary Academic Credentials -->
+      ${secondaryList.length > 0 ? `
+        <div class="edu-secondary-grid">
+          ${secondaryList.map((sec, idx) => {
+            const valMatch = sec.result ? sec.result.match(/[\d\.\%]+/) : null;
+            const val = valMatch ? valMatch[0] : sec.result;
+            const label = sec.result ? sec.result.replace(/[\d\.\%\:]/g, '').trim() || "Score" : "Score";
+            return `
+              <div class="edu-secondary-card fade-up" style="transition-delay: ${0.2 + idx * 0.1}s;">
+                <div class="edu-secondary-header">
+                  <h4 class="edu-secondary-title">${sec.degree}</h4>
+                  <span class="edu-secondary-score">${val} ${label}</span>
+                </div>
+                <p class="edu-secondary-inst">${sec.institution}</p>
+                <span class="edu-secondary-period">${sec.period}</span>
+              </div>
+            `;
+          }).join('')}
         </div>
-      </div>`).join('');
+      ` : ''}
+    `;
   })();
 </script>
 <script>
