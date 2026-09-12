@@ -395,15 +395,26 @@
 
   </div><!-- /.container -->
 </section>
-<section id="projects" class="section-alt">
+<section id="projects" class="work-section">
+  <div class="work-ambient" aria-hidden="true"></div>
   <div class="container">
-    <h2 class="section-title fade-up">Featured Projects</h2>
-    <div class="projects-banner fade-up">
-      <i class="fa-solid fa-trophy"></i>
-      <p>Delivered <span>5+ client solutions</span> across AI, ML, full-stack development, and data automation domains.</p>
+    
+    <!-- Section Header -->
+    <div class="work-header fade-up">
+      <p class="work-eyebrow">SELECTED WORK</p>
+      <h2 class="work-title">Turning Business Problems<br>Into Intelligent Products.</h2>
+      <p class="work-sub">
+        A selection of AI, automation, data, and full-stack solutions I've designed and built across client, research, and product-focused projects.
+      </p>
     </div>
-    <div id="projects-grid" class="projects-grid"></div>
-  </div>
+
+    <!-- Featured Projects Container (01, 02, 03) -->
+    <div id="featured-projects-container" class="work-featured-grid"></div>
+
+    <!-- Compact Projects Container (04, 05, 06) -->
+    <div id="compact-projects-container" class="work-compact-grid"></div>
+
+  </div><!-- /.container -->
 </section>
 <section id="skills">
   <div class="container">
@@ -525,32 +536,163 @@
     }).join('');
   })();
 
-  // ── Render: Projects ───────────────────────────────────────
-  (function renderProjects() {
-    const container = document.getElementById('projects-grid');
-    if (!container) return;
-    container.innerHTML = projects.map(p => `
-      <div class="card project-card fade-up">
-        <div class="card-header">
-          <div class="project-card-top">
-            <i class="${p.icon} project-icon"></i>
-            <span class="badge badge-outline">${p.badgeLabel}</span>
+  // ── Render: Projects V2 (Selected Work) ───────────────────
+  (function renderProjectsV2() {
+    const featuredContainer = document.getElementById('featured-projects-container');
+    const compactContainer = document.getElementById('compact-projects-container');
+    if (!featuredContainer || !compactContainer || typeof projects === 'undefined') return;
+
+    // Enriched metadata mapping (Source of truth: projects in data.js)
+    const projectConfigs = [
+      // 0: Stock Market Data Segregation
+      {
+        num: "01",
+        category: "CLIENT SOLUTION",
+        isFeatured: true,
+        concept: "Automating repetitive market-data processing workflows for a trading client.",
+        problem: "Repetitive manual stock-market data segregation causing processing overhead and analysis delays.",
+        solution: "Python & Streamlit automated processing pipeline for real-time segregation and structured monitoring.",
+        ctaText: null,
+        ctaUrl: null
+      },
+      // 1: Sports Company Website
+      {
+        num: "04",
+        category: "FULL-STACK / WEB",
+        isFeatured: false,
+        concept: null,
+        problem: null,
+        solution: null,
+        ctaText: "Visit Website",
+        ctaUrl: "https://primesport.in/"
+      },
+      // 2: Hybrid House Price Prediction
+      {
+        num: "05",
+        category: "RESEARCH / MACHINE LEARNING",
+        isFeatured: false,
+        concept: null,
+        problem: null,
+        solution: null,
+        ctaText: null,
+        ctaUrl: null
+      },
+      // 3: Loan Eligibility Prediction
+      {
+        num: "06",
+        category: "GENERATIVE AI / MACHINE LEARNING",
+        isFeatured: false,
+        concept: null,
+        problem: null,
+        solution: null,
+        ctaText: null,
+        ctaUrl: null
+      },
+      // 4: AI Question Generator
+      {
+        num: "02",
+        category: "GENERATIVE AI / SaaS",
+        isFeatured: true,
+        concept: "Turning study materials into structured exam questions using Retrieval-Augmented Generation.",
+        problem: "Time-consuming manual creation of exam questions, quizzes, and assessment materials for educators.",
+        solution: "SaaS platform using PyMuPDF parsing, ChromaDB vector embeddings, and RAG pipelines to generate structured tests in seconds.",
+        ctaText: null,
+        ctaUrl: null
+      },
+      // 5: Financial Auditing Intelligence System
+      {
+        num: "03",
+        category: "GENERATIVE AI / AUTOMATION",
+        isFeatured: true,
+        concept: "Transforming unstructured financial documents into structured audit intelligence.",
+        problem: "Unstructured financial PDFs requiring complex manual analysis and risk assessment by auditing teams.",
+        solution: "AI audit pipeline combining PyPDF2 extraction, Hugging Face embeddings, and Gemini 2.5 Flash for context-driven risk reports.",
+        ctaText: null,
+        ctaUrl: null
+      }
+    ];
+
+    // Enrich data.js project items with configs
+    const enrichedProjects = projects.map((p, idx) => {
+      let cfg = projectConfigs[idx] || { num: `0${idx+1}`, category: "AI / SOFTWARE", isFeatured: false };
+      if (p.title.includes("Stock Market")) cfg = projectConfigs[0];
+      else if (p.title.includes("Sports")) cfg = projectConfigs[1];
+      else if (p.title.includes("House Price")) cfg = projectConfigs[2];
+      else if (p.title.includes("Loan Eligibility")) cfg = projectConfigs[3];
+      else if (p.title.includes("Question Generator")) cfg = projectConfigs[4];
+      else if (p.title.includes("Financial Auditing")) cfg = projectConfigs[5];
+      return { ...p, ...cfg };
+    });
+
+    const featuredItems = enrichedProjects.filter(p => p.isFeatured);
+    const compactItems = enrichedProjects.filter(p => !p.isFeatured);
+
+    // Render Featured Cards (01, 02, 03)
+    featuredContainer.innerHTML = featuredItems.map((p, idx) => `
+      <article class="work-featured-card fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
+        <div class="work-card-inner">
+          <div class="work-card-header">
+            <div class="work-card-meta">
+              <span class="work-category">${p.category}</span>
+              <span class="work-num">${p.num}</span>
+            </div>
+            <h3 class="work-card-title">${p.title}</h3>
+            <p class="work-card-concept">${p.concept}</p>
           </div>
-          <div class="card-title">${p.url
-            ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none; border-bottom:1px solid rgba(139,92,246,0.4); transition:var(--transition);" onmouseover="this.style.borderBottomColor='var(--accent-2)'" onmouseout="this.style.borderBottomColor='rgba(139,92,246,0.4)'">${p.title} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75em; opacity:0.7;"></i></a>`
-            : p.title}</div>
+
+          <div class="work-story-grid">
+            <div class="work-story-item">
+              <span class="work-story-label">PROBLEM</span>
+              <p class="work-story-text">${p.problem}</p>
+            </div>
+            <div class="work-story-item">
+              <span class="work-story-label">SOLUTION</span>
+              <p class="work-story-text">${p.solution}</p>
+            </div>
+          </div>
+
+          <div class="work-achievements">
+            <span class="work-story-label">KEY DELIVERABLES</span>
+            <ul class="work-bullets">
+              ${p.achievements.map(a => `<li class="work-bullet">${a}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="work-card-footer">
+            <div class="work-tags">
+              ${p.tags.map(t => `<span class="work-tag">${t}</span>`).join('')}
+            </div>
+            ${(p.url || p.ctaUrl) ? `
+              <a href="${p.url || p.ctaUrl}" target="_blank" rel="noopener noreferrer" class="work-cta-btn">
+                ${p.ctaText || 'View Project'} <i class="fa-solid fa-arrow-right"></i>
+              </a>` : ''}
+          </div>
         </div>
-        <div class="card-content">
-          <p class="project-desc">${p.description}</p>
-          <div class="project-achievements">
-            <strong>Key Achievements:</strong>
-            <ul>${p.achievements.map(a => `<li>${a}</li>`).join('')}</ul>
+      </article>
+    `).join('');
+
+    // Render Compact Cards (04, 05, 06)
+    compactContainer.innerHTML = compactItems.map((p, idx) => `
+      <article class="work-compact-card fade-up" style="transition-delay: ${0.3 + idx * 0.1}s;">
+        <div class="work-compact-inner">
+          <div class="work-compact-header">
+            <span class="work-category">${p.category}</span>
+            <span class="work-num">${p.num}</span>
           </div>
-          <div class="badge-row">
-            ${p.tags.map(t => `<span class="badge badge-outline">${t}</span>`).join('')}
+          <h4 class="work-compact-title">${p.title}</h4>
+          <p class="work-compact-desc">${p.description}</p>
+          <div class="work-tags" style="margin-top:auto;">
+            ${p.tags.map(t => `<span class="work-tag">${t}</span>`).join('')}
           </div>
+          ${(p.url || p.ctaUrl) ? `
+            <div class="work-compact-action" style="margin-top:0.75rem;">
+              <a href="${p.url || p.ctaUrl}" target="_blank" rel="noopener noreferrer" class="work-cta-link">
+                ${p.ctaText || 'Visit Website'} <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>` : ''}
         </div>
-      </div>`).join('');
+      </article>
+    `).join('');
   })();
 
   // ── Render: Skills ─────────────────────────────────────────
