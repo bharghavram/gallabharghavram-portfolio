@@ -416,11 +416,54 @@
 
   </div><!-- /.container -->
 </section>
-<section id="skills">
+<section id="skills" class="stack-section">
+  <div class="stack-ambient" aria-hidden="true"></div>
   <div class="container">
-    <h2 class="section-title fade-up">Technical Skills</h2>
-    <div id="skills-grid" class="skills-grid"></div>
-  </div>
+    
+    <!-- Section Header -->
+    <div class="stack-header fade-up">
+      <p class="stack-eyebrow">THE ENGINEERING STACK</p>
+      <h2 class="stack-title">Technologies I Use to Build<br>Intelligent Software.</h2>
+      <p class="stack-sub">
+        From machine learning and Generative AI to backend systems and modern web applications, I work across the stack to turn ideas into usable software.
+      </p>
+    </div>
+
+    <!-- End-to-End Stack Capability Flow -->
+    <div class="stack-flow-banner fade-up">
+      <div class="stack-flow-step">
+        <span class="stack-flow-num">01</span>
+        <span class="stack-flow-text">AI Models &amp; RAG</span>
+      </div>
+      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="stack-flow-step">
+        <span class="stack-flow-num">02</span>
+        <span class="stack-flow-text">Data &amp; Embeddings</span>
+      </div>
+      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="stack-flow-step">
+        <span class="stack-flow-num">03</span>
+        <span class="stack-flow-text">Backend APIs &amp; Logic</span>
+      </div>
+      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="stack-flow-step">
+        <span class="stack-flow-num">04</span>
+        <span class="stack-flow-text">Product Interfaces</span>
+      </div>
+      <div class="stack-flow-arrow" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="stack-flow-step">
+        <span class="stack-flow-num">05</span>
+        <span class="stack-flow-text">Deployment &amp; Delivery</span>
+      </div>
+    </div>
+
+    <!-- Capabilities Grid -->
+    <div id="stack-capabilities-grid" class="stack-grid"></div>
+
+    <!-- Collaboration Section -->
+    <div id="stack-collaboration-block" class="stack-collab-wrapper fade-up"></div>
+
+  </div><!-- /.container -->
 </section>
 <section class="section-alt">
   <div class="container">
@@ -695,46 +738,167 @@
     `).join('');
   })();
 
-  // ── Render: Skills ─────────────────────────────────────────
-  (function renderSkills() {
-    const container = document.getElementById('skills-grid');
-    if (!container) return;
-    function renderGroups(groups) {
-      return groups.map(g => {
-        if (g.type === 'text') {
-          return `<div class="skill-sub-group">
-            <p class="skill-sub">${g.label}</p>
-            <p style="color:rgba(230,225,245,0.75); font-size:0.9375rem;">${g.content}</p>
-          </div>`;
-        }
-        return `<div class="skill-sub-group">
-          <p class="skill-sub">${g.label}</p>
-          <div class="badge-cloud">
-            ${g.items.map(i => `<span class="badge badge-outline">${i}</span>`).join('')}
+  // ── Render: Skills V2 (The Engineering Stack) ─────────────
+  (function renderSkillsV2() {
+    const container = document.getElementById('stack-capabilities-grid');
+    const collabContainer = document.getElementById('stack-collaboration-block');
+    if (!container || typeof technicalSkills === 'undefined') return;
+
+    const stackCategories = [
+      // 01 — AI & GENERATIVE AI (CORE)
+      {
+        num: "01",
+        category: "AI & GENERATIVE AI",
+        isCore: true,
+        badge: "CORE CAPABILITY",
+        description: "Designing intelligent applications around LLMs, retrieval, agents, and domain-specific AI workflows.",
+        groups: [
+          {
+            label: "LLMs & Agentic Architectures",
+            tags: ["Large Language Models / LLMs", "RAG", "LangChain", "LangFlow", "Multi-Agent Systems", "MCP Server", "Generative AI"]
+          },
+          {
+            label: "Model Customization & Embeddings",
+            tags: ["Hugging Face", "Fine-tuning", "Prompt Engineering", "Vector DB Retrieval"]
+          },
+          {
+            label: "AI Applications",
+            tags: ["Conversational Assistants", "Document Intelligence", "AI Application Development"]
+          }
+        ]
+      },
+      // 02 — MACHINE LEARNING & COMPUTER VISION
+      {
+        num: "02",
+        category: "MACHINE LEARNING & COMPUTER VISION",
+        isCore: false,
+        badge: null,
+        description: "Building predictive, classification, analytical, and computer-vision solutions using modern ML and DL frameworks.",
+        groups: [
+          {
+            label: "Frameworks & Libraries",
+            tags: ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "OpenCV"]
+          },
+          {
+            label: "Data Science & Analysis",
+            tags: ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
+          },
+          {
+            label: "Core Domains",
+            tags: ["Neural Networks", "Deep Learning", "Computer Vision", "Time Series Analysis", "NLP", "Regression & Classification"]
+          }
+        ]
+      },
+      // 03 — FULL-STACK ENGINEERING
+      {
+        num: "03",
+        category: "FULL-STACK ENGINEERING",
+        isCore: false,
+        badge: null,
+        description: "Building the application layer around AI — from APIs and backend services to responsive web interfaces and data systems.",
+        groups: [
+          {
+            label: "Languages & Core",
+            tags: ["Python", "JavaScript", "HTML", "CSS"]
+          },
+          {
+            label: "Backend & APIs",
+            tags: ["FastAPI", "Flask", "REST APIs", "API Routing", "CRUD"]
+          },
+          {
+            label: "Frontend & Databases",
+            tags: ["React.js", "DOM", "AJAX", "SQL", "MySQL", "SQLite", "MongoDB"]
+          }
+        ]
+      },
+      // 04 — AI PRODUCT DEVELOPMENT
+      {
+        num: "04",
+        category: "AI PRODUCT DEVELOPMENT",
+        isCore: false,
+        badge: null,
+        description: "Using modern AI-assisted development and creative tools to accelerate product design, interfaces, prototypes, and digital experiences.",
+        groups: [
+          {
+            label: "AI Assistants & Builders",
+            tags: ["Claude", "GPT", "Gemini", "BoltAI", "Lovable AI"]
+          },
+          {
+            label: "UI & Creative Tech",
+            tags: ["Figma", "Google Flow", "Stitch", "Prompt-to-UI", "AI Video Generation", "Motion Graphics", "3D Animated Videos"]
+          }
+        ]
+      },
+      // 05 — DATA, CLOUD & DELIVERY
+      {
+        num: "05",
+        category: "DATA, CLOUD & DELIVERY",
+        isCore: false,
+        badge: null,
+        description: "Working with data stores, version control, hosting, and deployment-oriented tooling.",
+        groups: [
+          {
+            label: "Deployment & Hosting",
+            tags: ["Git", "GitHub Pages", "Hostinger", "AWS S3"]
+          },
+          {
+            label: "Interactive Apps & Data",
+            tags: ["Streamlit", "SQL Databases", "MongoDB", "Data Pipelines"]
+          }
+        ]
+      }
+    ];
+
+    container.innerHTML = stackCategories.map((cat, idx) => `
+      <article class="stack-card ${cat.isCore ? 'stack-card-core' : ''} fade-up" style="transition-delay: ${0.1 + idx * 0.1}s;">
+        <div class="stack-card-inner">
+          <div class="stack-card-header">
+            <div class="stack-card-meta">
+              <span class="stack-category">${cat.category}</span>
+              <div class="stack-meta-right">
+                ${cat.badge ? `<span class="stack-core-badge">${cat.badge}</span>` : ''}
+                <span class="stack-num">${cat.num}</span>
+              </div>
+            </div>
+            <p class="stack-card-desc">${cat.description}</p>
           </div>
-        </div>`;
-      }).join('');
-    }
-    const s = technicalSkills;
-    container.innerHTML = `
-      <div class="fade-up">
-        <h3 class="skill-block-title"><i class="${s.mlAndAI.icon}"></i> ${s.mlAndAI.title}</h3>
-        ${renderGroups(s.mlAndAI.groups)}
-      </div>
-      <div class="fade-up">
-        <h3 class="skill-block-title"><i class="${s.fullstack.icon}"></i> ${s.fullstack.title}</h3>
-        ${renderGroups(s.fullstack.groups)}
-      </div>
-      <div class="fade-up">
-        <h3 class="skill-block-title"><i class="${s.aiCreative.icon}"></i> ${s.aiCreative.title}</h3>
-        ${renderGroups(s.aiCreative.groups)}
-      </div>
-      <div class="fade-up" style="grid-column: 1 / -1;">
-        <h3 class="skill-block-title">Soft Skills</h3>
-        <div class="soft-skills-grid">
-          ${s.softSkills.map(sk => `<div class="soft-skill-pill">${sk}</div>`).join('')}
+
+          <div class="stack-groups">
+            ${cat.groups.map(g => `
+              <div class="stack-group">
+                <h4 class="stack-group-label">${g.label}</h4>
+                <div class="stack-tags">
+                  ${g.tags.map(t => `<span class="stack-tag ${cat.isCore ? 'stack-tag-core' : ''}">${t}</span>`).join('')}
+                </div>
+              </div>
+            `).join('')}
+          </div>
         </div>
-      </div>`;
+      </article>
+    `).join('');
+
+    if (collabContainer) {
+      const softSkills = (technicalSkills && technicalSkills.softSkills) ? technicalSkills.softSkills : [
+        "Team Leadership", "Mentoring", "Technical Documentation", "Client Communication", "Agile Methodologies", "Public Speaking"
+      ];
+      collabContainer.innerHTML = `
+        <div class="stack-collab-inner">
+          <div class="stack-collab-header">
+            <span class="stack-collab-eyebrow">COLLABORATION</span>
+            <h3 class="stack-collab-title">Execution &amp; Leadership Capabilities</h3>
+            <p class="stack-collab-desc">Technical delivery also depends on clear communication, mentoring, documentation, and collaborative execution.</p>
+          </div>
+          <div class="stack-collab-grid">
+            ${softSkills.map(sk => `
+              <div class="stack-collab-pill">
+                <i class="fa-solid fa-check stack-collab-icon"></i>
+                <span>${sk}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
   })();
 
   // ── Render: Education ──────────────────────────────────────
